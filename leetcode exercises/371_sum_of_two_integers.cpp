@@ -1,5 +1,4 @@
 /**
-* @file Gandalf's Spell.cpp
  * @author Gurdeep Singh (gurdeepmundi10@gmail.com)
  * @brief Leetcode problem solution
  * @date 2022-03-07
