@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: bool
         """
         stack = []
-        compliments = {')': '(', ']': '[', '}': '{'}
+        complements = {')': '(', ']': '[', '}': '{'}
         for char in s:
             #if character is a starting bracket, add to stack
             if char == '(' or char == '[' or char == '{':
@@ -15,7 +15,7 @@ class Solution(object):
             else: 
                 if len(stack) == 0:
                     return False
-                if stack[-1] == compliments[char]:
+                if stack[-1] == complements[char]:
                     stack.pop()
                 else:
                     return False                        
