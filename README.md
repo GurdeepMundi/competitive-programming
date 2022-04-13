@@ -2,6 +2,7 @@ These are solutions for some competitive programming problems written either usi
 
 
 ## Directory structure
+'''
 .
 ├── CCPC 2022
 │   ├── gandalf's_spell.cpp
