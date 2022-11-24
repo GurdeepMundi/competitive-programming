@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    int totalFruit(vector<int>& fruits) {
+        // Using unordered map as baskets
+        unordered_map<int,int> basket;
+        int i = 0, count = 0;
+        for (int j = 0; j < fruits.size(); j++){
+            // Putting new fruits in our basket or increasing the number of the fruit
+            // if its already in the basket
+            basket[fruits[j]]++;
+            // If basket size exceeds 2 removing the extra fruits
+            while (basket.size() > 2 && i < j){
+                basket[fruits[i]]--;
+                if (basket[fruits[i]] == 0){
+                    basket.erase(fruits[i]);
+                }
+                i++;
+            }
+            // Updating count
+            count = max(count, (j - i + 1));
+        }
+        return count;
+    }
+};
+
+int main(){
+    Solution ob;
+    vector<int> fruits = {0,1,2,2};
+    cout << ob.totalFruit(fruits);
+    return 0;
+}
