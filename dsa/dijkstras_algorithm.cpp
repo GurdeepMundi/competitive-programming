@@ -1,3 +1,12 @@
+/**
+ * @file dijkstras_algorithm.cpp
+ * @author Gurdeep Singh
+ * @brief An implementation of the dijkstras algorithm using adjacency matrix
+ * and without using any priority_queue. O(v^2. This implementation will print
+ * parent -> node wt = shortest_weight_from_parent_to_node for every node.
+ * @date 2023-02-20
+ * 
+ */
 #include <iostream>
 #include <vector>
 #define V 6
@@ -66,6 +75,7 @@ int main()
     {0,0,0,0,0,4},
     {0,0,0,0,0,2},
     {0,0,0,0,1,3},};
+
     dijkstra(graph);
 
     return 0;
